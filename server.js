@@ -12,6 +12,9 @@ const PORT = process.env.PORT || 3000
 app.use(cors());
 app.use(json());
 
+app.get("/", (req, res) => {
+    res.json({ message: "School Management API is running" });
+});
 app.use("/api", schoolRoutes);
 
 
